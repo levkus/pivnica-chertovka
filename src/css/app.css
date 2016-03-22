@@ -1,0 +1,79 @@
+@import "vars";
+@import "header";
+@import "about";
+@import "menu";
+@import "footer";
+
+@font-face {
+  font-family: 'deutsch_gothicregular';
+  src: url('../fonts/deutschgothic-webfont.eot');
+  src: url('../fonts/deutschgothic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/deutschgothic-webfont.woff2') format('woff2'),
+       url('../fonts/deutschgothic-webfont.woff') format('woff'),
+       url('../fonts/deutschgothic-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  // background: url(../img/bg.jpg);
+  background-color: color($main-bg lightness(20%));
+  background-position: right;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  line-height: 20px;
+
+}
+
+a {
+  color: $main-link-color;
+
+  &:hover {
+    color: #fff;
+    transition: .2s;
+  }
+}
+
+section {
+  padding: 1rem;
+  max-width: $site-width;
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: 300;
+}
+
+#back-to-top {
+  display: none;
+  padding: 1rem;
+  background: rgba(220, 20, 60, 0.5);
+  position: fixed;
+  right: 0;
+  bottom: 100px;
+  text-transform: uppercase;
+  border: none;
+
+  &:hover {
+    background: rgba(220, 20, 60, 1);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+
+@media (max-width: $site-width) {
+  section {
+    background: rgba(0,0,0,0.3);
+    padding: 0.5rem;
+  }
+
+  #back-to-top {
+    display: none;
+  }
+}

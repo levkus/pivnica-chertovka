@@ -1,0 +1,81 @@
+#menu {
+
+}
+
+#menu-wrapper {
+  // padding: 1rem;
+
+  .menu-button {
+    display: block;
+    float: left;
+    text-decoration: none;
+    padding: 0.5rem;
+    // border-radius: 5px 5px 0 0;
+    border: none;
+    background: transparent;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      background: color($main-bg lightness(40%));
+    }
+
+    &.active {
+      background: $menu-bg;
+      color: color($menu-bg lightness(90%));
+    }
+
+  }
+
+  table {
+    width: 100%;
+    background: $menu-bg;
+    color: color($menu-bg lightness(85%));
+    margin-top: 7px;
+    // border-top: 1px solid crimson;
+
+    tr {
+
+      td {
+        vertical-align: top;
+        padding: 0.5rem;
+        text-align: right;
+
+        &:first-child {
+          padding-right: 0;
+        }
+      }
+
+      .menu-image {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .menu-item {
+        max-width: 400px;
+        text-align: left;
+
+        .menu-title {
+          margin-top: 0;
+          margin-bottom: 0.5rem;
+        }
+
+        .menu-description {
+          color: color($menu-bg lightness(75%));
+          font-size: 0.8rem;
+          margin: 0;
+        }
+      }
+
+    }
+  }
+}
+
+#kitchen {
+  display: none;
+}

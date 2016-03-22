@@ -1,0 +1,10 @@
+#youtube-video {
+  display: block;
+  border: none;
+}
+
+.attention {
+  display: block;
+  background: crimson;
+  padding: 1rem;
+}
