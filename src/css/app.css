@@ -17,7 +17,7 @@
 
 body {
   // background: url(../img/bg.jpg);
-  background-color: color($main-bg lightness(20%));
+  background-color: color($main-bg-light lightness(20%));
   background-position: right;
   background-attachment: fixed;
   background-size: cover;
@@ -33,7 +33,6 @@ a {
 
   &:hover {
     color: #fff;
-    transition: .2s;
   }
 }
 
@@ -50,15 +49,15 @@ h1 {
 #back-to-top {
   display: none;
   padding: 1rem;
-  background: rgba(220, 20, 60, 0.5);
+  background: rgba(0, 0, 0, 0.5);
   position: fixed;
-  right: 0;
+  right: 1rem;
   bottom: 100px;
   text-transform: uppercase;
   border: none;
 
   &:hover {
-    background: rgba(220, 20, 60, 1);
+    background: rgba(0, 0, 0, 1);
   }
 
   &:focus {

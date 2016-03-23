@@ -1,16 +1,5 @@
-@font-face {
-    font-family: 'icomoon';
-    src:    url('../fonts/icomoon.eot?byvw7r');
-    src:    url('../fonts/icomoon.eot?byvw7r#iefix') format('embedded-opentype'),
-        url('../fonts/icomoon.ttf?byvw7r') format('truetype'),
-        url('../fonts/icomoon.woff?byvw7r') format('woff'),
-        url('../fonts/icomoon.svg?byvw7r#icomoon') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
 footer {
-  background: $main-bg;
+  background: $main-bg-light;
   width: 100%;
 }
 
@@ -22,7 +11,7 @@ footer {
   padding: 1rem 0;
 }
 
-#footer-menu-desktop {
+#footer-menu {
 
 
   a {

@@ -1,28 +1,28 @@
 header {
   width: 100%;
-  height: $header-height;
-  background: $main-bg;
+  background: $main-bg-dark;
   color: #fff;
-  display: flex;
-  flex-flow: row nowrap;
+  text-align: center;
 }
 
 #menu-desktop {
-  height: 100%;
-  text-align: right;
-  flex-grow: 2;
-  margin-right: 1rem;
+  height: 3rem;
+  background: $main-bg-light;
+  width: 100%;
+  text-align: center;
+  box-shadow: inset 0px 3px 0 rgba(0,0,0,0.3);
 
   a {
     display: inline-block;
     padding: 0 1rem;
     text-decoration: none;
-    font-size: 1.2rem;
-    line-height: $header-height;
+    font-size: 1rem;
+    line-height: 3rem;
     color: $main-link-color;
 
     &.active, &:hover {
       color: #fff;
+      box-shadow: inset 0px -2px 0px $main-link-color;
     }
   }
 }
@@ -33,7 +33,7 @@ header {
   top: $header-height;
   left: 0;
   right: 0;
-  background: color($main-bg lightness(5%));
+  background: $main-bg-light;
   text-align: right;
 
   a {
@@ -46,14 +46,16 @@ header {
 
 #menu-mobile-toggle {
   display: none;
-  height: $header-height;
+  position: absolute;
+  right: 0.5rem;
+  top: 0;
+  height: 100%;
   line-height: header-height;
   font-size: 2rem;
   text-align: right;
-  flex-grow: 2;
-  padding-right: 1rem;
 
   i {
+    color: $main-link-color;
     line-height: $header-height;
   }
 }
@@ -62,18 +64,16 @@ header {
   font-family: 'deutsch_gothicregular';
   display: flex;
   flex-flow: row nowrap;
+  justify-content: center;
   align-items: center;
-  height: 100%;
-  line-height: $header-height;
+  height: $header-height;
   padding-left: 1rem;
   color: $main-link-color;
   text-decoration: none;
 
   span {
-    display: inline-block;
-    height: 100%;
+    display: block;
     font-size: 1.5rem;
-    line-height: $header-height;
     letter-spacing: 4px;
   }
 }
@@ -81,23 +81,28 @@ header {
 #logo-img {
   position: relative;
   z-index: 10;
-  display: inline-block;
-  height: 8rem;
-  width: 8rem;
+  display: block;
+  height: 5rem;
+  width: 5rem;
   background: url(../img/logo.png);
   background-position: 8px 50%;
   background-size: contain;
   background-repeat: no-repeat;
-  // background-color: $menu-bg;
+  background-color: $main-link-color;
   border-radius: 50%;
-  margin: 0 1rem 0 0;
+  border: 0.3rem solid color($main-bg-dark lightness(40%));
+  margin: 0 1rem;
 }
 
 
 @media (max-width: $site-width) {
+  header {
+    flex-flow: row;
+    justify-content: center;
+  }
+
   #menu-mobile-toggle {
     display: block;
-    padding-right: 0.5rem;
   }
 
   #menu-desktop {
@@ -105,14 +110,47 @@ header {
   }
 
   #logo-img {
-    display: none;
+    // display: none;
+    width: 4rem;
+    height: 4rem;
   }
 
   #logo {
-    padding-left: 0.5rem;
+    padding: 0;
+    text-align: right;
 
     span {
       font-size: 1.5rem;
     }
+  }
+}
+
+@media (max-width: 480px) {
+
+  #logo {
+    height: 4rem;
+
+    span:first-child {
+      display: none;
+    }
+
+    span {
+      line-height: 4rem;
+    }
+  }
+
+  #menu-mobile-toggle {
+
+    i {
+      line-height: 4rem;
+    }
+  }
+
+  #logo-img {
+    display: none;
+  }
+
+  #menu-mobile {
+    top: 4rem;
   }
 }

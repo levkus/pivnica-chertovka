@@ -5,6 +5,7 @@ var gulp = require("gulp"),
     precss = require('precss'),
     plumber = require('gulp-plumber'),
     cssnano = require('gulp-cssnano'),
+    imagemin = require('gulp-imagemin'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
     browserSync = require('browser-sync').create(),
@@ -36,7 +37,10 @@ gulp.task('html', function() {
 // Images
 
 gulp.task('images', function() {
-    gulp.src(['src/img/**/*.jpg', 'src/img/**/*.png'])
+    gulp.src('src/img/*')
+        .pipe(imagemin({
+            progressive: true
+        }))
         .pipe(gulp.dest('dist/img'))
         .pipe(reload({stream: true}));
 });

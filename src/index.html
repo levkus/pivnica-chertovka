@@ -10,101 +10,79 @@
   <link rel="stylesheet" href="css/app.min.css">
 </head>
 <body>
-    <header>
-      <a href="#" id="logo">
-        <div id="logo-img"></div>
-        <span>Чертовка</span>
-      </a>
-      <nav id="menu-desktop">
-        <a href="#about">О Нас</a>
-        <a href="#menu">Меню</a>
-        <a href="#gallery">Галлерея</a>
-        <a href="#contacts">Контакты</a>
-      </nav>
-      <nav id="menu-mobile">
-        <a href="#about">О Нас</a>
-        <a href="#menu">Меню</a>
-        <a href="#gallery">Галлерея</a>
-        <a href="#contacts">Контакты</a>
-      </nav>
-      <a href="#" id="menu-mobile-toggle"><i class="fa fa-bars"></i></a>
-    </header>
-    <section id="about">
-      <h1>Пивница "Чертовка"</h1>
-      <p class="headline">
-        Кто из вас не хочет побывать в Чехии? Но к сожалению, не всегда хватает времени и возможностей. Пивница "Чертовка" предлагает вам окунуться в атмосферу старой Европы не, покидая родного города. Мы расположены в самом центре Москвы и всегда рады видеть гостей!
-      </p>
-      <iframe id="youtube-video" width="100%" height="410" src="https://www.youtube.com/embed/1ugyRPy55Ms" allowfullscreen></iframe>
-      <div class="attention">
-        В нашем заведении паровозик доставит напитки по настоящей железной дороге прямо к вашему столу, что не оставит равнодушными ни взрослых ни детей.
-      </div>
-    </section>
-    <section id="menu">
-      <h1>Меню</h1>
-      <div id="menu-wrapper">
-        <button class="menu-button active" id="bar-button" href="">Пивная карта</button>
-        <button class="menu-button" id="kitchen-button" href="">Меню кухни</button>
-        <table id="bar">
-          <tr>
-            <td class="menu-image">
-              <div class="menu-image" style="background-image: url(img/chertovka.png);"></div>
-            </td>
-            <td class="menu-item">
-              <p class="menu-title">Чертовка (специальное светлое) 4.0%</p>
-              <p class="menu-description"></p>
-            </td>
-            <td class="menu-weight">0.3/0.5</td>
-            <td class="menu-price">160/210 руб.</td>
-          </tr>
-          <tr>
-            <td class="menu-image">
-              <div class="menu-image" style="background-image: url(img/kozel.png);"></div>
-            </td>
-            <td class="menu-item">
-              <p class="menu-title">Велкопоповицкий козел (светлое) 4.0%</p>
-              <p class="menu-description">Пиво с умеренной солодовой сладостью чистого золотого цвета. Вкус у этого пива достаточно гладкий и сухой, с нотками зерна и сена, с приятным послевкусием</p>
-            </td>
-            <td class="menu-weight">0.3/0.5</td>
-            <td class="menu-price">160/210 руб.</td>
-          </tr>
-
-        </table>
-        <table id="kitchen">
-          <tr>
-            <td class="menu-image">
-              <div class="menu-image" style="background-image: url(img/kes.png);"></div>
-            </td>
-            <td class="menu-item">
-              <p class="menu-title">Кесадилья с грибами или с курицей</p>
-              <p class="menu-description">Мексиканская лепешка с куриной или грибной начинкой на выбор, с сыром) Подается с острым соусом сальса</p>
-            </td>
-            <td class="menu-weight">205 гр</td>
-            <td class="menu-price">330 руб.</td>
-          </tr>
-        </table>
-      </div>
-    </section>
-    <section id="gallery"></section>
-    <section id="contacts"></section>
-    <footer>
-      <div id="footer-wrap">
-        <nav id="footer-menu-desktop">
-          <a href="#about">О Нас</a>
-          <a href="#menu">Меню</a>
-          <a href="#gallery">Галлерея</a>
-          <a href="#contacts">Контакты</a>
-        </nav>
-        <div id="footer-social">
-          <a class="link-facebook" href="#facebook"><i class="fa fa-facebook"></i></a>
-          <a class="link-vk" href="#vk"><i class="fa fa-vk"></i></a>
-          <a class="link-instagram"href="#instagram"><i class="fa fa-instagram"></i></a>
+  <header>
+    <a href="#" id="logo">
+      <span>Пивница</span>
+      <div id="logo-img"></div>
+      <span>Чертовка</span>
+    </a>
+    <nav id="menu-desktop">
+      <a href="index.html">О Нас</a>
+      <a href="menu.html">Меню</a>
+      <a href="#gallery">Галлерея</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a href="#" id="menu-mobile-toggle"><i class="fa fa-bars"></i></a>
+  </header>
+  <nav id="menu-mobile">
+    <a href="index.html">О Нас</a>
+    <a href="menu.html">Меню</a>
+    <a href="#gallery">Галлерея</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+  <section id="about">
+    <div class="tile">
+    </div>
+    <div class="tile">
+      <div class="tile-contacts">
+        <h1>Контакты:</h1>
+        <p><i class="fa fa-phone"></i>+7 (495) 621-29-27</p>
+        <p><i class="fa fa-map-marker"></i>Москва, ул. Сретенка, д. 16/2</p>
+        <div class="metro">
+          <div class="metro-sign lime"></div>
+          <div class="metro-text">Сретенский бульвар</div>
+        </div>
+        <div class="metro">
+          <div class="metro-sign red"></div>
+          <div class="metro-text">Чистые пруды</div>
+        </div>
+        <div class="metro">
+          <div class="metro-sign orange"></div>
+          <div class="metro-text">Тургеневская, Сухаревская</div>
         </div>
       </div>
-      <div id="footer-copyright">
-        &copy; 2016 Пивница "Чертовка"
+    </div>
+    <div class="tile">
+      <div class="tile-menu">
+        <h1>Меню</h1>
       </div>
-    </footer>
-    <button id="back-to-top"><i class="fa fa-chevron-up"></i></button>
+    </div>
+    <div class="tile special">
+      <h2>Отличная Акция!</h2>
+      <h1>90 руб.</h1>
+      <h3>Только по четвергам</h3>
+    </div>
+  </section>
+  <section id="contacts"></section>
+  <footer>
+    <div id="footer-wrap">
+      <nav id="footer-menu">
+        <a href="index.html">О Нас</a>
+        <a href="menu.html">Меню</a>
+        <a href="#gallery">Галлерея</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <div id="footer-social">
+        <a class="link-facebook" href="#facebook"><i class="fa fa-facebook"></i></a>
+        <a class="link-vk" href="#vk"><i class="fa fa-vk"></i></a>
+        <a class="link-instagram"href="#instagram"><i class="fa fa-instagram"></i></a>
+      </div>
+    </div>
+    <div id="footer-copyright">
+      &copy; 2016 Пивница "Чертовка"
+    </div>
+  </footer>
+  <button id="back-to-top"><i class="fa fa-chevron-up"></i></button>
 
   <script src="../bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
   <script src="js/main.min.js"></script>

@@ -1,10 +1,125 @@
-#youtube-video {
-  display: block;
-  border: none;
+#about {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 100%;
+  padding: 0;
+
+  .tile {
+    width: 50%;
+    height: 35rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:first-child {
+      background-image: url(../img/photo1.jpg);
+      background-size: cover;
+      background-position: 50% 20%;
+    }
+    &:nth-child(2) {
+      background: #160b07;
+      flex-flow: column;
+
+      h1 {
+        text-transform: uppercase;
+        font-size: 3rem;
+      }
+
+      i {
+        display: inline-block;
+        width: 1.7rem;
+        text-align: center;
+        font-size: 1.2rem;
+        margin-right: 0.2rem;
+      }
+
+      .metro {
+        margin-bottom: 0.5rem;
+
+        .metro-sign {
+          display: inline-block;
+          padding: 0.2rem;
+          text-align: center;
+          line-height: 0.9rem;
+          height: 1.7rem;
+          width: 1.7rem;
+          border-radius: 50%;
+          box-sizing: border-box;
+           &:after {
+             content: 'м';
+             display: block;
+             position: relative;
+           }
+
+          &.lime {
+            border: 3px solid lime;
+          }
+          &.orange {
+            border: 3px solid orange;
+          }
+          &.red {
+            border: 3px solid red;
+          }
+        }
+
+        .metro-text {
+          display: inline-block;
+        }
+      }
+    }
+    &:nth-child(3) {
+      background: #F99405;
+      color: color($main-bg-dark lightness(20%));
+      padding: 1rem;
+
+      .tile-menu {
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        border: 2px solid color($main-bg-dark lightness(20%));
+        padding: 1rem;
+      }
+    }
+    &.special {
+      background-image: url(../img/photo2.jpg);
+      background-size: cover;
+      background-position: center;
+      flex-flow: column nowrap;
+      text-transform: uppercase;
+      text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+
+      h1 {
+        font-size: 7rem;
+        text-transform: none;
+        font-weight: bold;
+      }
+    }
+  }
 }
 
-.attention {
-  display: block;
-  background: crimson;
-  padding: 1rem;
+@media (max-width: $site-width) {
+  #about {
+
+    .tile {
+      width: 100%;
+      min-height: 20rem;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  #about {
+
+    .tile {
+
+      &.special {
+
+        h1 {
+          font-size: 5rem;
+        }
+      }
+    }
+  }
 }
