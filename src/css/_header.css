@@ -16,7 +16,7 @@ header {
     display: inline-block;
     padding: 0 1rem;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 3rem;
     color: $main-link-color;
 
@@ -84,14 +84,21 @@ header {
   display: block;
   height: 5rem;
   width: 5rem;
-  background: url(../img/logo.png);
+  // background: url(../img/logo.png);
   background-position: 8px 50%;
   background-size: contain;
   background-repeat: no-repeat;
   background-color: $main-link-color;
   border-radius: 50%;
-  border: 0.3rem solid color($main-bg-dark lightness(40%));
-  margin: 0 1rem;
+  border: 0.3rem solid color($main-bg-dark lightness(80%));
+  margin: 1rem 1rem;
+
+  img {
+    position: relative;
+    width: 8rem;
+    left: -12px;
+    top: -5px;
+  }
 }
 
 
@@ -113,6 +120,13 @@ header {
     // display: none;
     width: 4rem;
     height: 4rem;
+
+    img {
+      position: relative;
+      width: 6rem;
+      left: -8px;
+      top: -3px;
+    }
   }
 
   #logo {
@@ -130,12 +144,12 @@ header {
   #logo {
     height: 4rem;
 
-    span:first-child {
-      display: none;
-    }
-
     span {
       line-height: 4rem;
+
+      &:first-child {
+        display: none;
+      }
     }
   }
 

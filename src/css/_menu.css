@@ -48,25 +48,25 @@
 
         &:first-child {
           padding-right: 0;
+          width: 2rem;
+        }
+
+        &.menu-item {
+          max-width: 400px;
+          text-align: left;
+
+          .menu-title {
+            margin-top: 0;
+            margin-bottom: 0.3rem;
+          }
+
+          .menu-description {
+            color: color($menu-bg lightness(75%));
+            font-size: 0.8rem;
+            margin: 0;
+          }
         }
       }
-
-      .menu-item {
-        max-width: 400px;
-        text-align: left;
-
-        .menu-title {
-          margin-top: 0;
-          margin-bottom: 0.3rem;
-        }
-
-        .menu-description {
-          color: color($menu-bg lightness(75%));
-          font-size: 0.8rem;
-          margin: 0;
-        }
-      }
-
     }
   }
 }
