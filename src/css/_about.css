@@ -98,6 +98,24 @@
   }
 }
 
+#contacts {
+  max-width: 100%;
+  padding: 0;
+  height: 35rem;
+
+  .map-wrapper {
+    width: 100%;
+    height: 100%;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      pointer-events: none;
+    }
+  }
+}
+
 @media (max-width: $site-width) {
   .about-tile {
     width: 100%;

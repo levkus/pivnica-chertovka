@@ -16,6 +16,10 @@ $('#bar-button').on('click', function(){
   $('#bar').show();
 });
 
+$('#contacts .map-wrapper').on('click', function() {
+  $('.map-wrapper iframe').css('pointer-events', 'auto');
+});
+
 $(function(){
 
   $(window).scroll(function() {
