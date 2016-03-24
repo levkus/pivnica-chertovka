@@ -2,3 +2,4 @@ node_modules
 bower_components
 .tern-project
 .DS_Store
+/dist/couch

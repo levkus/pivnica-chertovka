@@ -9,13 +9,13 @@ $(function(){
         ignored = navButton.add(nav);
 
     ignored.on('touchstart', function(e) {
-      nav.slideToggle();
+      nav.slideToggle(200);
       e.stopPropagation(); // Предотвращаем передачу клика в document
     });
 
     $('header, section').on('touchstart', function() {
       if (nav.is(':visible')) {
-        nav.slideToggle();
+        nav.slideToggle(200);
       }
     });
   }
@@ -25,7 +25,7 @@ $(function(){
     var $this = $(this),
         tab = $this.attr('data-tab');
 
-    $(tab).show().siblings('table').hide();
+    $(tab).show().siblings('div').hide();
     $this.addClass('active').siblings().removeClass('active');
   });
 

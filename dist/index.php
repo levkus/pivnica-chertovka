@@ -1,9 +1,25 @@
+<?php require_once( 'couch/cms.php' ); ?>
+
+<cms:template title="Главная">
+  <cms:editable
+    name="phone_number"
+    label="Номер телефона"
+    type="text"
+  />
+  <cms:editable
+    name="address"
+    label="Адрес"
+    type="text"
+  />
+
+</cms:template>
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Чертовка</title>
+  <title>Пивница Чертовка</title>
   <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css">
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -17,16 +33,16 @@
       <span>Чертовка</span>
     </a>
     <nav id="nav-desktop">
-      <a href="index.html">О Нас</a>
-      <a href="menu.html">Меню</a>
+      <a href="index.php">О Нас</a>
+      <a href="menu.php">Меню</a>
       <a href="#gallery">Галлерея</a>
       <a href="#contacts">Контакты</a>
     </nav>
     <a href="#" id="nav-mobile-toggle"><i class="fa fa-bars"></i></a>
   </header>
   <nav id="nav-mobile">
-    <a href="index.html">О Нас</a>
-    <a href="menu.html">Меню</a>
+    <a href="index.php">О Нас</a>
+    <a href="menu.php">Меню</a>
     <a href="#gallery">Галлерея</a>
     <a href="#contacts">Контакты</a>
   </nav>
@@ -36,8 +52,8 @@
     <div class="about-tile about-contacts">
       <div class="about-contacts-wrapper">
         <h1>Контакты:</h1>
-        <p><i class="fa fa-phone"></i>+7 (495) 621-29-27</p>
-        <p><i class="fa fa-map-marker"></i>Москва, ул. Сретенка, д. 16/2</p>
+        <p><i class="fa fa-phone"></i><a href="tel:<cms:show phone_number />"><cms:show phone_number /></a></p>
+        <p><i class="fa fa-map-marker"></i><a href="#map"><cms:show address /></a></p>
         <div class="metro">
           <div class="metro-sign lime"></div>
           <div class="metro-text">Сретенский бульвар</div>
@@ -85,8 +101,8 @@
   <footer>
     <div id="footer-wrap">
       <nav id="footer-nav">
-        <a href="index.html">О Нас</a>
-        <a href="menu.html">Меню</a>
+        <a href="index.php">О Нас</a>
+        <a href="menu.php">Меню</a>
         <a href="#gallery">Галлерея</a>
         <a href="#contacts">Контакты</a>
       </nav>
@@ -106,3 +122,5 @@
   <script src="js/main.min.js"></script>
 </body>
 </html>
+
+<?php COUCH::invoke(); ?>

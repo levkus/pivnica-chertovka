@@ -16,13 +16,17 @@ var gulp = require("gulp"),
 
 gulp.task('browser-sync', function() {
     browserSync.init({
-        server: {
-            baseDir: "./dist/",
-            routes: {
-                "/bower_components" : "bower_components",
-                "/fonts" : "fonts"
-            }
+        proxy: {
+            target: "localhost:8888/pivnica/dist",
         }
+        // server: {
+        //     port: 8888,
+        //     baseDir: "./dist/",
+        //     routes: {
+        //         "/bower_components" : "bower_components",
+        //         "/fonts" : "fonts"
+        //     }
+        // }
     });
 });
 
@@ -30,6 +34,12 @@ gulp.task('browser-sync', function() {
 
 gulp.task('html', function() {
     gulp.src('src/*.html')
+        .pipe(gulp.dest('dist/'))
+        .pipe(reload({stream: true}));
+});
+
+gulp.task('php', function() {
+    gulp.src('src/*.php')
         .pipe(gulp.dest('dist/'))
         .pipe(reload({stream: true}));
 });
@@ -82,6 +92,7 @@ gulp.task('js', function() {
 
 gulp.task('watch', function() {
     gulp.watch('src/*.html', ['html']);
+    gulp.watch('src/*.php', ['php']);
     gulp.watch(['src/img/**/*.jpg', 'src/img/**/*.png'], ['images']);
     gulp.watch('src/css/**/*.css', ['css']);
     gulp.watch('src/js/**/*.js', ['js']);

@@ -53,13 +53,13 @@
 
 
         &.lime {
-          border: 3px solid lime;
+          border: 3px solid #8BC34A;
         }
         &.orange {
-          border: 3px solid orange;
+          border: 3px solid #FF6F00;
         }
         &.red {
-          border: 3px solid red;
+          border: 3px solid #F44336;
         }
       }
 

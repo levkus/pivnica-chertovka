@@ -1,84 +1,116 @@
-#menu {
+.menu-button {
+  background: color($main-bg-light lightness(30%));
+  color: $main-link-color;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1.1rem;
 
+  &:focus {
+    outline: none;
+  }
+
+  &:hover, &.active {
+    background: $menu-bg;
+    color: $main-bg-dark;
+  }
 }
 
-#menu-wrapper {
-  // padding: 1rem;
+.menu-table {
+  width: 100%;
+  color: $main-bg-dark;
 
-  .menu-button {
-    display: block;
-    float: left;
-    text-decoration: none;
-    padding: 0.5rem;
-    border: none;
-    background: transparent;
-
-    &:focus {
-      outline: none;
-    }
+  tr {
 
     &:hover {
-      background: color($main-bg-light lightness(40%));
+      background: color($main-link-color lightness(85%));
     }
 
-    &.active {
-      background: $menu-bg;
-      color: color($menu-bg lightness(90%));
-    }
+    td {
+      vertical-align: top;
+      height: 5rem;
+      padding: 0.5rem;
 
-  }
-
-  table {
-    width: 100%;
-    background: $menu-bg;
-    color: color($menu-bg lightness(85%));
-    margin-top: 7px;
-    // border-top: 1px solid crimson;
-
-    tr {
-
-      &:hover {
-        background: color($main-bg-light lightness(45%));
+      &:first-child {
+        width: 3rem;
+        padding: 0.5rem 0 0 0.5rem;
       }
 
-      td {
-        vertical-align: top;
-        padding: 0.5rem;
+      &:last-child {
         text-align: right;
-
-        &:first-child {
-          padding-right: 0;
-          width: 2rem;
-        }
-
-        &.menu-item {
-          max-width: 400px;
-          text-align: left;
-
-          .menu-title {
-            margin-top: 0;
-            margin-bottom: 0.3rem;
-          }
-
-          .menu-description {
-            color: color($menu-bg lightness(75%));
-            font-size: 0.8rem;
-            margin: 0;
-          }
-        }
       }
     }
   }
+}
+
+p.menu_item_title {
+  font-weight: 400;
+  margin: 0;
+}
+
+p.menu_item_content {
+  font-size: 0.8rem;
+  font-style: italic;
+  margin: 0.5rem 0 0;
+  font-weight: 300;
+}
+
+p.menu_item_price {
+  color: #B14848;
+  font-weight: 400;
+  margin: 0;
+
+  &:before {
+    content: '₽';
+  }
+}
+
+p.menu_item_weight {
+  font-size: 0.8rem;
+  font-style: italic;
+  margin: 0.5rem 0 0;
+
+  &:after {
+    content: ' г';
+  }
+}
+
+p.menu_item_volume {
+  font-size: 0.8rem;
+  font-style: italic;
+  margin: 0.5rem 0 0;
+
+  &:after {
+    content: ' мл';
+  }
+}
+
+.menu_item_picture {
+
+  a {
+    display: block;
+    height: 3rem;
+    width: 3rem;
+    background-color: $main-bg-light;
+    background-position: center;
+    background-size: cover;
+    border-radius: 0.5rem;
+  }
+}
+
+#bar, #kitchen {
+  background: $menu-bg;
+  padding: 0.5rem;
+  color: $main-bg-dark;
+
+  h3 {
+    text-align: center;
+  }
+}
+
+#bar {
+  display: block;
 }
 
 #kitchen {
   display: none;
-}
-
-.menu-image {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  background-position: center;
-  background-size: cover;
 }

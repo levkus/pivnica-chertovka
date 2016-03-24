@@ -5,5 +5,5 @@ $header-height: 7rem;
 /* Colors */
 $main-bg-light: #F56226;
 $main-bg-dark: #4b2814;
-$menu-bg: color($main-bg-light lightness(40%));
+$menu-bg: #FFF8E1;
 $main-link-color: #FFF8E1;
