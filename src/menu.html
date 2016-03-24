@@ -16,25 +16,25 @@
       <div id="logo-img"><img src="img/logo.png" alt="logo" /></div>
       <span>Чертовка</span>
     </a>
-    <nav id="menu-desktop">
+    <nav id="nav-desktop">
       <a href="index.html">О Нас</a>
       <a href="menu.html">Меню</a>
       <a href="#gallery">Галлерея</a>
       <a href="#contacts">Контакты</a>
     </nav>
-    <nav id="menu-mobile">
+    <nav id="nav-mobile">
       <a href="index.html">О Нас</a>
       <a href="menu.html">Меню</a>
       <a href="#gallery">Галлерея</a>
       <a href="#contacts">Контакты</a>
     </nav>
-    <a href="#" id="menu-mobile-toggle"><i class="fa fa-bars"></i></a>
+    <a href="#" id="nav-mobile-toggle"><i class="fa fa-bars"></i></a>
   </header>
   <section id="menu">
     <h1>Меню</h1>
     <div id="menu-wrapper">
-      <button class="menu-button active" id="bar-button" href="">Пивная карта</button>
-      <button class="menu-button" id="kitchen-button" href="">Меню кухни</button>
+      <button class="menu-button active" id="bar-button" data-tab="#bar">Пивная карта</button>
+      <button class="menu-button" id="kitchen-button" data-tab="#kitchen">Меню кухни</button>
       <table id="bar">
         <tr>
           <td>
@@ -77,7 +77,7 @@
   </section>
   <footer>
     <div id="footer-wrap">
-      <nav id="footer-menu">
+      <nav id="footer-nav">
         <a href="index.html">О Нас</a>
         <a href="menu.html">Меню</a>
         <a href="#gallery">Галлерея</a>

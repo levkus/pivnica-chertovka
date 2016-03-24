@@ -70,8 +70,10 @@ gulp.task('css', function() {
 
 gulp.task('js', function() {
     gulp.src(['src/js/**/*.js', 'src/js/**/*.min.js'])
+        .pipe(sourcemaps.init())
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify())
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('dist/js'))
         .pipe(reload({stream: true}));
 });

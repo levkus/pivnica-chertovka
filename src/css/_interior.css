@@ -1,0 +1,46 @@
+#interior {
+  max-width: 100%;
+  padding: 0;
+
+  .interior-wrapper {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+  }
+}
+
+.interior-small-pic {
+  display: block;
+  width: 25%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  &:nth-child(5n+1) {background: #EC407A}
+  &:nth-child(5n+2) {background: #AB47BC}
+  &:nth-child(5n+3) {background: #7E57C2}
+  &:nth-child(5n+4) {background: #5C6BC0}
+  &:nth-child(5n+5) {background: #42A5F5}
+
+  &:before {
+    display: block;
+    position: relative;
+    content: '';
+    padding-top: 75%;
+  }
+}
+
+@media (max-width: $site-width) {
+  .interior-small-pic {
+    width: 33.33%;
+  }
+}
+
+@media (max-width: 480px) {
+  .interior-small-pic {
+    width: 50%;
+  }
+}

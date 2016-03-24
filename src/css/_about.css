@@ -98,21 +98,16 @@
   }
 }
 
-#contacts {
+#map {
   max-width: 100%;
   padding: 0;
   height: 35rem;
 
-  .map-wrapper {
+  iframe {
     width: 100%;
     height: 100%;
-
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      pointer-events: none;
-    }
+    border: none;
+    pointer-events: none;
   }
 }
 
@@ -127,5 +122,9 @@
 @media (max-width: 480px) {
   .about-tile.about-special h1 {
     font-size: 5rem;
+  }
+
+  #map {
+    height: 25rem;
   }
 }
