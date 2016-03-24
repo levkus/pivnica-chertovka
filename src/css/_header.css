@@ -35,6 +35,7 @@ header {
   right: 0;
   background: $main-bg-light;
   text-align: right;
+  z-index: 3;
 
   a {
     display: block;

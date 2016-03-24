@@ -8,6 +8,7 @@
   <title>Чертовка</title>
   <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css">
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/app.min.css">
 </head>
@@ -32,6 +33,7 @@
     </nav>
     <a href="#" id="nav-mobile-toggle"><i class="fa fa-bars"></i></a>
   </header>
+  <div id="beer"></div>
   <section id="menu">
     <h1>Меню</h1>
     <div id="menu-wrapper">
@@ -71,7 +73,7 @@
           <table class="menu-table">
             <cms:show_repeatable 'bar_position'>
               <tr>
-                <td class="menu_item_picture">
+                <td class="menu_item_picture menu_item_picture_bar">
                 <cms:if bar_item_picture>
                   <a href="<cms:show bar_item_picture/>" style="background-image: url(<cms:show bar_item_picture/>);"></a>
                 </cms:if>
