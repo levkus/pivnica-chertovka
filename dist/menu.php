@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/app.min.css">
 </head>
-<body>
+<body class="with-background">
   <header>
     <a href="#" id="logo">
       <span>Пивница</span>
@@ -35,7 +35,6 @@
   </header>
   <div id="beer"></div>
   <section id="menu">
-    <h1>Меню</h1>
     <div id="menu-wrapper">
       <button class="menu-button active" id="bar-button" data-tab="#bar">Карта бара</button
         ><button class="menu-button" id="kitchen-button" data-tab="#kitchen">Меню кухни</button>

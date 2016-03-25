@@ -17,16 +17,18 @@
 }
 
 body {
-  background-image: url(../img/bg.png);
-  /*background-color: color($main-bg-light lightness(20%));*/
-  background-position: right;
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: #160b07;
   color: #fff;
   width: 100%;
   font-family: 'Roboto', sans-serif;
-  /*line-height: 20px;*/
+
+  &.with-background {
+    background-image: url(../img/bg.png);
+    background-position: right;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
 }
 

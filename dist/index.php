@@ -11,7 +11,15 @@
     label="Адрес"
     type="text"
   />
-
+  <cms:editable
+    name="special_pic"
+    label="Баннер акции"
+    type="image"
+    width="800"
+    height="600"
+    show_preview="1"
+    preview_height="200"
+  />
 </cms:template>
 
 <!DOCTYPE html>
@@ -25,7 +33,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/app.min.css">
 </head>
-<body>
+<body class="with-background">
   <header>
     <a href="#" id="logo">
       <span>Пивница</span>
@@ -47,7 +55,12 @@
     <a href="#contacts">Контакты</a>
   </nav>
   <section id="about">
-    <div class="about-tile about-pics">
+    <div class="about-tile about-pics" id="slider">
+      <ul class="slides">
+        <li class="slide"></li>
+        <li class="slide"></li>
+        <li class="slide"></li>
+      </ul>
     </div>
     <div class="about-tile about-contacts">
       <div class="about-contacts-wrapper">
@@ -74,25 +87,21 @@
       </div>
     </div>
     <div class="about-tile about-special">
-      <h2>Отличная Акция!</h2>
-      <h1>90 руб.</h1>
-      <h3>Только по четвергам</h3>
+      <h3>Каждый четверг</h3>
+      <h1>90 руб</h1>
+      <h2>Пинта светлого</h2>
     </div>
   </section>
+  <div class="section-divider">
+    Наш интерьер
+  </div>
   <section id="interior">
     <div class="interior-wrapper">
-      <a href="" class="interior-small-pic" onclick="return false;"></a>
-      <a href="" class="interior-small-pic" onclick="return false;"></a>
-      <a href="" class="interior-small-pic" onclick="return false;"></a>
-      <a href="" class="interior-small-pic" onclick="return false;"></a>
-      <a href="" class="interior-small-pic" onclick="return false;"></a>
-      <a href="" class="interior-small-pic" onclick="return false;"></a>
-      <a href="" class="interior-small-pic" onclick="return false;"></a>
-      <a href="" class="interior-small-pic" onclick="return false;"></a>
-      <a href="" class="interior-small-pic" onclick="return false;"></a>
-      <a href="" class="interior-small-pic" onclick="return false;"></a>
-      <a href="" class="interior-small-pic" onclick="return false;"></a>
-      <a href="" class="interior-small-pic" onclick="return false;"></a>
+      <cms:pages masterpage="gallery.php">
+        <div class="interior-pic-wrapper">
+          <a href="<cms:show gg_image />" class="interior-small-pic" style="background-image: url(<cms:thumbnail gg_image width='400' quality='80'/>)"></a>
+        </div>
+      </cms:pages>
     </div>
   </section>
   <section id="map">
